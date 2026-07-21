@@ -96,7 +96,7 @@
     },
     {
       "parameters": {
-        "model": "qwen2.5-coder:14b",
+        "model": "llama3.2:3b",
         "baseUrl": "http://localhost:11434"
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
@@ -110,7 +110,7 @@
     },
     {
       "parameters": {
-        "model": "qwen2.5-coder:14b",
+        "model": "llama3.2:3b",
         "baseUrl": "http://localhost:11434"
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
@@ -124,7 +124,7 @@
     },
     {
       "parameters": {
-        "model": "qwen2.5-coder:14b",
+        "model": "llama3.2:3b",
         "baseUrl": "http://localhost:11434"
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
@@ -138,7 +138,7 @@
     },
     {
       "parameters": {
-        "model": "qwen2.5-coder:14b",
+        "model": "llama3.2:3b",
         "baseUrl": "http://localhost:11434"
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
@@ -152,7 +152,7 @@
     },
     {
       "parameters": {
-        "model": "qwen2.5-coder:14b",
+        "model": "llama3.2:3b",
         "baseUrl": "http://localhost:11434"
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
@@ -166,7 +166,7 @@
     },
     {
       "parameters": {
-        "model": "qwen2.5-coder:14b",
+        "model": "llama3.2:3b",
         "baseUrl": "http://localhost:11434"
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
@@ -180,7 +180,7 @@
     },
     {
       "parameters": {
-        "model": "qwen2.5-coder:14b",
+        "model": "llama3.2:3b",
         "baseUrl": "http://localhost:11434"
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
@@ -194,7 +194,7 @@
     },
     {
       "parameters": {
-        "model": "qwen2.5-coder:14b",
+        "model": "llama3.2:3b",
         "baseUrl": "http://localhost:11434"
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
