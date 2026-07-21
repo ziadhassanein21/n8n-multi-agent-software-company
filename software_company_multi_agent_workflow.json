@@ -97,7 +97,11 @@
     {
       "parameters": {
         "model": "llama3.2:3b",
-        "baseUrl": "http://localhost:11434"
+        "baseUrl": "http://localhost:11434",
+        "options": {
+          "numCtx": 8192,
+          "numPredict": 4096
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
@@ -111,7 +115,11 @@
     {
       "parameters": {
         "model": "llama3.2:3b",
-        "baseUrl": "http://localhost:11434"
+        "baseUrl": "http://localhost:11434",
+        "options": {
+          "numCtx": 8192,
+          "numPredict": 4096
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
@@ -125,7 +133,11 @@
     {
       "parameters": {
         "model": "llama3.2:3b",
-        "baseUrl": "http://localhost:11434"
+        "baseUrl": "http://localhost:11434",
+        "options": {
+          "numCtx": 8192,
+          "numPredict": 4096
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
@@ -139,7 +151,11 @@
     {
       "parameters": {
         "model": "llama3.2:3b",
-        "baseUrl": "http://localhost:11434"
+        "baseUrl": "http://localhost:11434",
+        "options": {
+          "numCtx": 8192,
+          "numPredict": 4096
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
@@ -153,7 +169,11 @@
     {
       "parameters": {
         "model": "llama3.2:3b",
-        "baseUrl": "http://localhost:11434"
+        "baseUrl": "http://localhost:11434",
+        "options": {
+          "numCtx": 8192,
+          "numPredict": 4096
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
@@ -167,7 +187,11 @@
     {
       "parameters": {
         "model": "llama3.2:3b",
-        "baseUrl": "http://localhost:11434"
+        "baseUrl": "http://localhost:11434",
+        "options": {
+          "numCtx": 8192,
+          "numPredict": 4096
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
@@ -181,7 +205,11 @@
     {
       "parameters": {
         "model": "llama3.2:3b",
-        "baseUrl": "http://localhost:11434"
+        "baseUrl": "http://localhost:11434",
+        "options": {
+          "numCtx": 8192,
+          "numPredict": 4096
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
@@ -195,7 +223,11 @@
     {
       "parameters": {
         "model": "llama3.2:3b",
-        "baseUrl": "http://localhost:11434"
+        "baseUrl": "http://localhost:11434",
+        "options": {
+          "numCtx": 8192,
+          "numPredict": 4096
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
@@ -421,7 +453,7 @@
         "promptType": "define",
         "text": "=CEO Plan: {{ JSON.stringify($json.ceo_plan) }}\nBA Specs: {{ JSON.stringify($json.ba_specs) }}\nArchitecture: {{ JSON.stringify($json.architecture_specs) }}\nBackend Code: {{ JSON.stringify($json.backend_code) }}\nFrontend Code: {{ JSON.stringify($json.frontend_code) }}\nQA Report: {{ JSON.stringify($json.qa_report) }}\nDocumentation: {{ JSON.stringify($json.tech_docs) }}",
         "options": {
-          "systemMessage": "You are the Executive VP of AI Delivery and Final Synthesizer.\n\nMerge all agent outputs into ONE single elegant, well-formatted markdown document.\nInclude sections: Executive Summary, Features & User Stories, Architecture, Backend Code, Frontend Code, QA Report, Documentation.\nPresent it in a clear, professional, impressive format."
+          "systemMessage": "You are the Executive VP of AI Delivery and Final Synthesizer.\n\nMerge all agent outputs into ONE complete, elegant, well-formatted markdown document.\nYou MUST include ALL 7 sections:\n1. Executive Summary\n2. Features & User Stories Matrix\n3. Architecture & Tech Stack\n4. Backend Code & APIs\n5. Frontend Components & UI Logic\n6. QA & Security Audit Report\n7. Technical Documentation & Deployment Guide\n\nKeep descriptions concise and code examples structured so that ALL sections are fully written and complete without being truncated or cut off at the end."
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
