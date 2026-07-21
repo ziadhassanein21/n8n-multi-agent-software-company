@@ -1,5 +1,5 @@
 {
-  "name": "Multi-Agent AI Software Company Workflow",
+  "name": "Multi-Agent AI Software Company Workflow (Ollama Edition)",
   "nodes": [
     {
       "parameters": {
@@ -96,131 +96,115 @@
     },
     {
       "parameters": {
-        "model": "gpt-4o",
-        "options": {
-          "temperature": 0.2
-        }
+        "model": "qwen2.5-coder:14b",
+        "baseUrl": "http://localhost:11434"
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
         180,
         480
       ],
       "id": "lm-ceo",
-      "name": "OpenAI Model - CEO"
+      "name": "Ollama Model - CEO"
     },
     {
       "parameters": {
-        "model": "gpt-4o",
-        "options": {
-          "temperature": 0.3
-        }
+        "model": "qwen2.5-coder:14b",
+        "baseUrl": "http://localhost:11434"
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
         680,
         480
       ],
       "id": "lm-ba",
-      "name": "OpenAI Model - BA"
+      "name": "Ollama Model - BA"
     },
     {
       "parameters": {
-        "model": "gpt-4o",
-        "options": {
-          "temperature": 0.2
-        }
+        "model": "qwen2.5-coder:14b",
+        "baseUrl": "http://localhost:11434"
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
         1180,
         480
       ],
       "id": "lm-architect",
-      "name": "OpenAI Model - Architect"
+      "name": "Ollama Model - Architect"
     },
     {
       "parameters": {
-        "model": "gpt-4o",
-        "options": {
-          "temperature": 0.2
-        }
+        "model": "qwen2.5-coder:14b",
+        "baseUrl": "http://localhost:11434"
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
         1680,
         520
       ],
       "id": "lm-frontend",
-      "name": "OpenAI Model - Frontend"
+      "name": "Ollama Model - Frontend"
     },
     {
       "parameters": {
-        "model": "gpt-4o",
-        "options": {
-          "temperature": 0.2
-        }
+        "model": "qwen2.5-coder:14b",
+        "baseUrl": "http://localhost:11434"
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
         1680,
         220
       ],
       "id": "lm-backend",
-      "name": "OpenAI Model - Backend"
+      "name": "Ollama Model - Backend"
     },
     {
       "parameters": {
-        "model": "gpt-4o",
-        "options": {
-          "temperature": 0.1
-        }
+        "model": "qwen2.5-coder:14b",
+        "baseUrl": "http://localhost:11434"
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
         2680,
         480
       ],
       "id": "lm-qa",
-      "name": "OpenAI Model - QA"
+      "name": "Ollama Model - QA"
     },
     {
       "parameters": {
-        "model": "gpt-4o",
-        "options": {
-          "temperature": 0.3
-        }
+        "model": "qwen2.5-coder:14b",
+        "baseUrl": "http://localhost:11434"
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
         3180,
         480
       ],
       "id": "lm-techwriter",
-      "name": "OpenAI Model - TechWriter"
+      "name": "Ollama Model - TechWriter"
     },
     {
       "parameters": {
-        "model": "gpt-4o",
-        "options": {
-          "temperature": 0.3
-        }
+        "model": "qwen2.5-coder:14b",
+        "baseUrl": "http://localhost:11434"
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
         3680,
         480
       ],
       "id": "lm-merger",
-      "name": "OpenAI Model - ExecutiveMerger"
+      "name": "Ollama Model - ExecutiveMerger"
     },
     {
       "parameters": {
@@ -441,7 +425,7 @@
         ]
       ]
     },
-    "OpenAI Model - CEO": {
+    "Ollama Model - CEO": {
       "ai_languageModel": [
         [
           {
@@ -474,7 +458,7 @@
         ]
       ]
     },
-    "OpenAI Model - BA": {
+    "Ollama Model - BA": {
       "ai_languageModel": [
         [
           {
@@ -507,7 +491,7 @@
         ]
       ]
     },
-    "OpenAI Model - Architect": {
+    "Ollama Model - Architect": {
       "ai_languageModel": [
         [
           {
@@ -545,7 +529,7 @@
         ]
       ]
     },
-    "OpenAI Model - Frontend": {
+    "Ollama Model - Frontend": {
       "ai_languageModel": [
         [
           {
@@ -556,7 +540,7 @@
         ]
       ]
     },
-    "OpenAI Model - Backend": {
+    "Ollama Model - Backend": {
       "ai_languageModel": [
         [
           {
@@ -600,7 +584,7 @@
         ]
       ]
     },
-    "OpenAI Model - QA": {
+    "Ollama Model - QA": {
       "ai_languageModel": [
         [
           {
@@ -633,7 +617,7 @@
         ]
       ]
     },
-    "OpenAI Model - TechWriter": {
+    "Ollama Model - TechWriter": {
       "ai_languageModel": [
         [
           {
@@ -666,7 +650,7 @@
         ]
       ]
     },
-    "OpenAI Model - ExecutiveMerger": {
+    "Ollama Model - ExecutiveMerger": {
       "ai_languageModel": [
         [
           {
@@ -682,10 +666,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "b1a2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
-  "id": "SoftwareCompanyMultiAgentWorkflow",
+  "versionId": "c2b3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e",
+  "id": "SoftwareCompanyMultiAgentWorkflowOllama",
   "meta": {
-    "templateId": "multi-agent-software-company-n8n"
+    "templateId": "multi-agent-software-company-n8n-ollama"
   },
   "tags": []
 }
