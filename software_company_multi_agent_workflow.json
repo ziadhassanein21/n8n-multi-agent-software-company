@@ -4,15 +4,15 @@
     {
       "parameters": {
         "content": "## Phase 1: Executive Orchestration\nCEO receives the user request and breaks it into structured tasks.",
-        "height": 300,
-        "width": 440,
+        "height": 500,
+        "width": 520,
         "color": 6
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -40,
-        160
+        -20,
+        140
       ],
       "id": "sticky-1",
       "name": "Phase 1 Note"
@@ -20,15 +20,15 @@
     {
       "parameters": {
         "content": "## Phase 2: Requirements & Architecture\nBA generates user stories. Architect designs tech stack, DB schema & API contracts.",
-        "height": 300,
-        "width": 940,
+        "height": 500,
+        "width": 920,
         "color": 4
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        460,
-        160
+        640,
+        140
       ],
       "id": "sticky-2",
       "name": "Phase 2 Note"
@@ -36,15 +36,15 @@
     {
       "parameters": {
         "content": "## Phase 3: Sequential Engineering\nBackend Developer builds APIs & DB models first.\nFrontend Developer then builds UI against the Architect spec.",
-        "height": 300,
-        "width": 940,
+        "height": 500,
+        "width": 920,
         "color": 3
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1460,
-        160
+        1600,
+        140
       ],
       "id": "sticky-3",
       "name": "Phase 3 Note"
@@ -52,15 +52,15 @@
     {
       "parameters": {
         "content": "## Phase 4: QA & Documentation\nQA audits both code branches. Tech Writer compiles all docs.",
-        "height": 300,
-        "width": 700,
+        "height": 500,
+        "width": 920,
         "color": 2
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        2460,
-        160
+        2560,
+        140
       ],
       "id": "sticky-4",
       "name": "Phase 4 Note"
@@ -68,15 +68,15 @@
     {
       "parameters": {
         "content": "## Phase 5: Executive Delivery\nFinal Agent assembles all outputs into one polished deliverable.",
-        "height": 300,
-        "width": 440,
+        "height": 500,
+        "width": 360,
         "color": 5
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        3220,
-        160
+        3520,
+        140
       ],
       "id": "sticky-5",
       "name": "Phase 5 Note"
@@ -88,7 +88,7 @@
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.1,
       "position": [
-        -10,
+        0,
         360
       ],
       "id": "chat-trigger",
@@ -102,8 +102,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        180,
-        520
+        200,
+        560
       ],
       "id": "lm-ceo",
       "name": "Ollama - CEO"
@@ -117,7 +117,7 @@
       "typeVersion": 1,
       "position": [
         680,
-        520
+        560
       ],
       "id": "lm-ba",
       "name": "Ollama - BA"
@@ -130,8 +130,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        1180,
-        520
+        1160,
+        560
       ],
       "id": "lm-arch",
       "name": "Ollama - Architect"
@@ -144,8 +144,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        1680,
-        520
+        1640,
+        560
       ],
       "id": "lm-be",
       "name": "Ollama - Backend"
@@ -158,8 +158,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        2080,
-        520
+        2120,
+        560
       ],
       "id": "lm-fe",
       "name": "Ollama - Frontend"
@@ -172,8 +172,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        2560,
-        520
+        2600,
+        560
       ],
       "id": "lm-qa",
       "name": "Ollama - QA"
@@ -186,8 +186,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        2960,
-        520
+        3080,
+        560
       ],
       "id": "lm-tw",
       "name": "Ollama - TechWriter"
@@ -200,8 +200,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        3360,
-        520
+        3560,
+        560
       ],
       "id": "lm-merger",
       "name": "Ollama - Merger"
@@ -217,7 +217,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        180,
+        200,
         360
       ],
       "id": "agent-ceo",
@@ -230,7 +230,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        380,
+        440,
         360
       ],
       "id": "parse-ceo",
@@ -247,7 +247,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        580,
+        680,
         360
       ],
       "id": "agent-ba",
@@ -260,7 +260,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        780,
+        920,
         360
       ],
       "id": "parse-ba",
@@ -277,7 +277,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        980,
+        1160,
         360
       ],
       "id": "agent-arch",
@@ -290,7 +290,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1180,
+        1400,
         360
       ],
       "id": "parse-arch",
@@ -307,7 +307,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        1480,
+        1640,
         360
       ],
       "id": "agent-be",
@@ -320,7 +320,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1680,
+        1880,
         360
       ],
       "id": "parse-be",
@@ -337,7 +337,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        1880,
+        2120,
         360
       ],
       "id": "agent-fe",
@@ -350,7 +350,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2080,
+        2360,
         360
       ],
       "id": "parse-fe",
@@ -367,7 +367,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        2280,
+        2600,
         360
       ],
       "id": "agent-qa",
@@ -380,7 +380,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2480,
+        2840,
         360
       ],
       "id": "parse-qa",
@@ -397,7 +397,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        2680,
+        3080,
         360
       ],
       "id": "agent-tw",
@@ -410,7 +410,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2880,
+        3320,
         360
       ],
       "id": "parse-tw",
@@ -427,7 +427,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        3080,
+        3560,
         360
       ],
       "id": "agent-merger",
