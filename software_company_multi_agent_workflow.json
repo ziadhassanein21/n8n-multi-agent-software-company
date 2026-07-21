@@ -3,9 +3,9 @@
   "nodes": [
     {
       "parameters": {
-        "content": "## 1. Executive Orchestration Phase\nReceives user prompt, deconstructs application scope, and delegates targeted tasks without producing implementation code.",
-        "height": 420,
-        "width": 460,
+        "content": "## Phase 1: Executive Orchestration\nCEO receives the user request and breaks it into structured tasks.",
+        "height": 300,
+        "width": 440,
         "color": 6
       },
       "type": "n8n-nodes-base.stickyNote",
@@ -14,14 +14,14 @@
         -40,
         160
       ],
-      "id": "sticky-phase-1",
-      "name": "Sticky Phase 1"
+      "id": "sticky-1",
+      "name": "Phase 1 Note"
     },
     {
       "parameters": {
-        "content": "## 2. Planning & Architecture Phase\nBusiness Analyst converts tasks into PRD/User Stories. Solution Architect designs tech stack, schemas, and API contracts.",
-        "height": 420,
-        "width": 960,
+        "content": "## Phase 2: Requirements & Architecture\nBA generates user stories. Architect designs tech stack, DB schema & API contracts.",
+        "height": 300,
+        "width": 940,
         "color": 4
       },
       "type": "n8n-nodes-base.stickyNote",
@@ -30,56 +30,56 @@
         460,
         160
       ],
-      "id": "sticky-phase-2",
-      "name": "Sticky Phase 2"
+      "id": "sticky-2",
+      "name": "Phase 2 Note"
     },
     {
       "parameters": {
-        "content": "## 3. Concurrent Development Phase\nFrontend and Backend Developer agents work in parallel based strictly on Architect & BA JSON inputs.",
-        "height": 600,
-        "width": 980,
+        "content": "## Phase 3: Sequential Engineering\nBackend Developer builds APIs & DB models first.\nFrontend Developer then builds UI against the Architect spec.",
+        "height": 300,
+        "width": 940,
         "color": 3
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
         1460,
-        70
+        160
       ],
-      "id": "sticky-phase-3",
-      "name": "Sticky Phase 3"
+      "id": "sticky-3",
+      "name": "Phase 3 Note"
     },
     {
       "parameters": {
-        "content": "## 4. Verification & Documentation Phase\nQA Engineer audits code for bugs and security vulnerabilities. Technical Writer generates complete documentation & README.",
-        "height": 420,
-        "width": 960,
+        "content": "## Phase 4: QA & Documentation\nQA audits both code branches. Tech Writer compiles all docs.",
+        "height": 300,
+        "width": 700,
         "color": 2
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        2480,
+        2460,
         160
       ],
-      "id": "sticky-phase-4",
-      "name": "Sticky Phase 4"
+      "id": "sticky-4",
+      "name": "Phase 4 Note"
     },
     {
       "parameters": {
-        "content": "## 5. Executive Synthesis Phase\nMerges all agent artifacts into a single unified, executive-grade deliverable.",
-        "height": 420,
-        "width": 460,
+        "content": "## Phase 5: Executive Delivery\nFinal Agent assembles all outputs into one polished deliverable.",
+        "height": 300,
+        "width": 440,
         "color": 5
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        3480,
+        3220,
         160
       ],
-      "id": "sticky-phase-5",
-      "name": "Sticky Phase 5"
+      "id": "sticky-5",
+      "name": "Phase 5 Note"
     },
     {
       "parameters": {
@@ -89,7 +89,7 @@
       "typeVersion": 1.1,
       "position": [
         -10,
-        300
+        360
       ],
       "id": "chat-trigger",
       "name": "When Chat Message Received"
@@ -103,10 +103,10 @@
       "typeVersion": 1,
       "position": [
         180,
-        480
+        520
       ],
       "id": "lm-ceo",
-      "name": "Ollama Model - CEO"
+      "name": "Ollama - CEO"
     },
     {
       "parameters": {
@@ -117,10 +117,10 @@
       "typeVersion": 1,
       "position": [
         680,
-        480
+        520
       ],
       "id": "lm-ba",
-      "name": "Ollama Model - BA"
+      "name": "Ollama - BA"
     },
     {
       "parameters": {
@@ -131,10 +131,10 @@
       "typeVersion": 1,
       "position": [
         1180,
-        480
+        520
       ],
-      "id": "lm-architect",
-      "name": "Ollama Model - Architect"
+      "id": "lm-arch",
+      "name": "Ollama - Architect"
     },
     {
       "parameters": {
@@ -147,8 +147,8 @@
         1680,
         520
       ],
-      "id": "lm-frontend",
-      "name": "Ollama Model - Frontend"
+      "id": "lm-be",
+      "name": "Ollama - Backend"
     },
     {
       "parameters": {
@@ -158,11 +158,11 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        1680,
-        220
+        2080,
+        520
       ],
-      "id": "lm-backend",
-      "name": "Ollama Model - Backend"
+      "id": "lm-fe",
+      "name": "Ollama - Frontend"
     },
     {
       "parameters": {
@@ -172,11 +172,11 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        2680,
-        480
+        2560,
+        520
       ],
       "id": "lm-qa",
-      "name": "Ollama Model - QA"
+      "name": "Ollama - QA"
     },
     {
       "parameters": {
@@ -186,11 +186,11 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        3180,
-        480
+        2960,
+        520
       ],
-      "id": "lm-techwriter",
-      "name": "Ollama Model - TechWriter"
+      "id": "lm-tw",
+      "name": "Ollama - TechWriter"
     },
     {
       "parameters": {
@@ -200,222 +200,235 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        3680,
-        480
+        3360,
+        520
       ],
       "id": "lm-merger",
-      "name": "Ollama Model - ExecutiveMerger"
+      "name": "Ollama - Merger"
     },
     {
       "parameters": {
+        "promptType": "define",
         "text": "={{ $json.chatInput }}",
         "options": {
-          "systemMessage": "=You are the Chief Executive Officer (CEO) & Manager Agent of an elite AI Software Company.\n\nRESPONSIBILITIES:\n1. Analyze the user's software project request.\n2. Deconstruct the project into specialized, actionable tasks for downstream agents.\n3. Decide project scope and generate structured JSON.\n4. STRICT RULE: You NEVER generate implementation details, code, API handlers, UI components, or DB schemas.\n\nOUTPUT FORMAT:\nYou MUST return ONLY valid JSON matching this schema exactly:\n{\n  \"project_name\": \"String\",\n  \"summary\": \"String\",\n  \"requirements_task\": \"String\",\n  \"architecture_task\": \"String\",\n  \"frontend_task\": \"String\",\n  \"backend_task\": \"String\",\n  \"testing_task\": \"String\",\n  \"documentation_task\": \"String\"\n}"
-        },
-        "promptType": "define"
+          "systemMessage": "You are the CEO & Manager Agent of an AI Software Company.\n\nRESPONSIBILITIES:\n- Analyze the user request\n- Break it into tasks for specialized agents\n- NEVER write code or implementation details\n\nReturn ONLY a raw JSON object (no markdown, no backticks):\n{\n  \"project_name\": \"string\",\n  \"summary\": \"string\",\n  \"requirements_task\": \"string\",\n  \"architecture_task\": \"string\",\n  \"frontend_task\": \"string\",\n  \"backend_task\": \"string\",\n  \"testing_task\": \"string\",\n  \"documentation_task\": \"string\"\n}"
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
         180,
-        300
+        360
       ],
       "id": "agent-ceo",
-      "name": "1. CEO / Manager Agent"
+      "name": "1. CEO Manager Agent"
     },
     {
       "parameters": {
-        "jsCode": "let rawText = $input.first().json.output || $input.first().json.text || '';\ntry {\n  const clean = rawText.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ceo_plan: parsed } }];\n} catch (e) {\n  return [{ json: { ceo_plan: {\n    project_name: \"Software Project\",\n    summary: rawText,\n    requirements_task: \"Analyze requirements based on user request\",\n    architecture_task: \"Design modular solution architecture\",\n    frontend_task: \"Build responsive modern frontend interface\",\n    backend_task: \"Build scalable REST API backend service\",\n    testing_task: \"Perform full QA and security audit\",\n    documentation_task: \"Generate complete deployment & API docs\"\n  } } }];\n}"
+        "jsCode": "const raw = $input.first().json.output || $input.first().json.text || '';\ntry {\n  const clean = raw.replace(/```json\\n?/g,'').replace(/```\\n?/g,'').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ceo_plan: parsed } }];\n} catch(e) {\n  return [{ json: { ceo_plan: { project_name:'Project', summary: raw, requirements_task:'Analyze requirements', architecture_task:'Design architecture', frontend_task:'Build frontend', backend_task:'Build backend', testing_task:'QA testing', documentation_task:'Write docs' } } }];\n}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        360,
-        300
+        380,
+        360
       ],
       "id": "parse-ceo",
-      "name": "Parse CEO JSON"
+      "name": "Parse CEO Output"
     },
     {
       "parameters": {
-        "text": "=Project Name: {{ $json.ceo_plan.project_name }}\nSummary: {{ $json.ceo_plan.summary }}\nRequirements Task: {{ $json.ceo_plan.requirements_task }}",
+        "promptType": "define",
+        "text": "=Project: {{ $json.ceo_plan.project_name }}\nSummary: {{ $json.ceo_plan.summary }}\nRequirements Task: {{ $json.ceo_plan.requirements_task }}",
         "options": {
-          "systemMessage": "=You are the Business Analyst (BA) Agent of an elite AI Software Company.\n\nRESPONSIBILITIES:\n1. Analyze requirements from the CEO Manager.\n2. Identify features, epic breakdown, user stories with acceptance criteria.\n3. Formulate non-functional requirements (security, performance, compliance, accessibility).\n\nOUTPUT FORMAT:\nReturn ONLY valid JSON with no conversational text or markdown codeblocks:\n{\n  \"project_name\": \"String\",\n  \"features\": [\"String\"],\n  \"user_stories\": [\n    {\n      \"id\": \"US-01\",\n      \"as_a\": \"String\",\n      \"i_want\": \"String\",\n      \"so_that\": \"String\",\n      \"acceptance_criteria\": [\"String\"]\n    }\n  ],\n  \"functional_requirements\": [\"String\"],\n  \"non_functional_requirements\": {\n    \"performance\": \"String\",\n    \"security\": \"String\",\n    \"scalability\": \"String\"\n  }\n}"
-        },
-        "promptType": "define"
+          "systemMessage": "You are the Business Analyst Agent.\n\nReturn ONLY a raw JSON object (no markdown, no backticks):\n{\n  \"features\": [\"string\"],\n  \"user_stories\": [{\"id\":\"US-01\",\"as_a\":\"string\",\"i_want\":\"string\",\"so_that\":\"string\",\"acceptance_criteria\":[\"string\"]}],\n  \"functional_requirements\": [\"string\"],\n  \"non_functional_requirements\": {\"performance\":\"string\",\"security\":\"string\",\"scalability\":\"string\"}\n}"
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        500,
-        300
+        580,
+        360
       ],
       "id": "agent-ba",
       "name": "2. Business Analyst Agent"
     },
     {
       "parameters": {
-        "jsCode": "let rawText = $input.first().json.output || $input.first().json.text || '';\nlet ceoPlan = $('Parse CEO JSON').first().json.ceo_plan;\ntry {\n  const clean = rawText.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ceo_plan: ceoPlan, ba_specs: parsed } }];\n} catch (e) {\n  return [{ json: { ceo_plan: ceoPlan, ba_specs: { text: rawText } } }];\n}"
+        "jsCode": "const raw = $input.first().json.output || $input.first().json.text || '';\nconst ceoPlan = $('Parse CEO Output').first().json.ceo_plan;\ntry {\n  const clean = raw.replace(/```json\\n?/g,'').replace(/```\\n?/g,'').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ceo_plan: ceoPlan, ba_specs: parsed } }];\n} catch(e) {\n  return [{ json: { ceo_plan: ceoPlan, ba_specs: { text: raw } } }];\n}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        840,
-        300
+        780,
+        360
       ],
       "id": "parse-ba",
-      "name": "Parse BA JSON"
+      "name": "Parse BA Output"
     },
     {
       "parameters": {
-        "text": "=CEO Architecture Task: {{ $json.ceo_plan.architecture_task }}\nBA Functional Requirements: {{ JSON.stringify($json.ba_specs) }}",
+        "promptType": "define",
+        "text": "=Architecture Task: {{ $json.ceo_plan.architecture_task }}\nRequirements: {{ JSON.stringify($json.ba_specs) }}",
         "options": {
-          "systemMessage": "=You are the Solution Architect Agent of an elite AI Software Company.\n\nRESPONSIBILITIES:\n1. Design end-to-end technical system architecture based on BA requirements.\n2. Define tech stack, directory folder structure, architectural pattern (MVC/Microservices/Clean Architecture).\n3. Design API contracts, Database Entity-Relationship models, Authentication mechanism, and Deployment strategy.\n\nOUTPUT FORMAT:\nReturn ONLY valid JSON:\n{\n  \"tech_stack\": {\n    \"frontend\": \"String\",\n    \"backend\": \"String\",\n    \"database\": \"String\",\n    \"auth\": \"String\"\n  },\n  \"folder_structure\": \"String\",\n  \"modules\": [\"String\"],\n  \"api_architecture\": [\"String\"],\n  \"database_schema\": \"String\",\n  \"auth_strategy\": \"String\",\n  \"deployment_approach\": \"String\"\n}"
-        },
-        "promptType": "define"
+          "systemMessage": "You are the Solution Architect Agent.\n\nReturn ONLY a raw JSON object (no markdown, no backticks):\n{\n  \"tech_stack\": {\"frontend\":\"string\",\"backend\":\"string\",\"database\":\"string\",\"auth\":\"string\"},\n  \"folder_structure\": \"string\",\n  \"modules\": [\"string\"],\n  \"api_architecture\": [\"string\"],\n  \"database_schema\": \"string\",\n  \"auth_strategy\": \"string\",\n  \"deployment_approach\": \"string\"\n}"
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
         980,
-        300
+        360
       ],
-      "id": "agent-architect",
+      "id": "agent-arch",
       "name": "3. Solution Architect Agent"
     },
     {
       "parameters": {
-        "jsCode": "let rawText = $input.first().json.output || $input.first().json.text || '';\nlet ceoPlan = $('Parse BA JSON').first().json.ceo_plan;\nlet baSpecs = $('Parse BA JSON').first().json.ba_specs;\ntry {\n  const clean = rawText.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ceo_plan: ceoPlan, ba_specs: baSpecs, architecture_specs: parsed } }];\n} catch (e) {\n  return [{ json: { ceo_plan: ceoPlan, ba_specs: baSpecs, architecture_specs: { text: rawText } } }];\n}"
+        "jsCode": "const raw = $input.first().json.output || $input.first().json.text || '';\nconst prev = $('Parse BA Output').first().json;\ntry {\n  const clean = raw.replace(/```json\\n?/g,'').replace(/```\\n?/g,'').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ceo_plan: prev.ceo_plan, ba_specs: prev.ba_specs, architecture_specs: parsed } }];\n} catch(e) {\n  return [{ json: { ceo_plan: prev.ceo_plan, ba_specs: prev.ba_specs, architecture_specs: { text: raw } } }];\n}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1300,
-        300
+        1180,
+        360
       ],
-      "id": "parse-architect",
-      "name": "Parse Architect JSON"
+      "id": "parse-arch",
+      "name": "Parse Architect Output"
     },
     {
       "parameters": {
-        "text": "=Frontend Task: {{ $json.ceo_plan.frontend_task }}\nBA Requirements: {{ JSON.stringify($json.ba_specs) }}\nArchitect Tech Stack & Specs: {{ JSON.stringify($json.architecture_specs) }}",
+        "promptType": "define",
+        "text": "=Backend Task: {{ $json.ceo_plan.backend_task }}\nArchitect Specs: {{ JSON.stringify($json.architecture_specs) }}\nBA Requirements: {{ JSON.stringify($json.ba_specs) }}",
         "options": {
-          "systemMessage": "=You are the Frontend Developer Agent of an elite AI Software Company.\n\nRESPONSIBILITIES:\n1. Implement full UI design, client-side routing, state management, and component architecture.\n2. Write modern code components (React/Next.js/Vue/Vanilla HTML+CSS+JS).\n3. Provide API integration plan matching Architect API specifications.\n4. STRICT RULE: Do NOT generate backend controllers, database queries, or server code.\n\nOUTPUT FORMAT:\nReturn ONLY valid JSON:\n{\n  \"components\": [{\"name\": \"String\", \"code\": \"String\"}],\n  \"routing\": \"String\",\n  \"state_management\": \"String\",\n  \"folder_structure\": \"String\",\n  \"ui_logic\": \"String\",\n  \"api_integration_plan\": \"String\"\n}"
-        },
-        "promptType": "define"
+          "systemMessage": "You are the Backend Developer Agent.\nDo NOT generate any frontend UI, HTML, or CSS.\n\nReturn ONLY a raw JSON object (no markdown, no backticks):\n{\n  \"rest_apis\": [{\"endpoint\":\"string\",\"method\":\"string\",\"description\":\"string\",\"controller_code\":\"string\"}],\n  \"services\": [{\"name\":\"string\",\"code\":\"string\"}],\n  \"database_models\": [{\"model_name\":\"string\",\"schema_code\":\"string\"}],\n  \"authentication\": \"string\",\n  \"validation\": \"string\",\n  \"business_logic_summary\": \"string\"\n}"
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        1500,
-        420
+        1480,
+        360
       ],
-      "id": "agent-frontend",
-      "name": "4. Frontend Developer Agent"
+      "id": "agent-be",
+      "name": "4. Backend Developer Agent"
     },
     {
       "parameters": {
-        "text": "=Backend Task: {{ $json.ceo_plan.backend_task }}\nBA Requirements: {{ JSON.stringify($json.ba_specs) }}\nArchitect Specs: {{ JSON.stringify($json.architecture_specs) }}",
-        "options": {
-          "systemMessage": "=You are the Backend Developer Agent of an elite AI Software Company.\n\nRESPONSIBILITIES:\n1. Implement robust RESTful APIs, business logic controllers, service layers, DB models, authentication middleware, and input validation.\n2. Ensure error handling and secure data serialization.\n3. STRICT RULE: Do NOT generate frontend UI components, styling, or HTML templates.\n\nOUTPUT FORMAT:\nReturn ONLY valid JSON:\n{\n  \"rest_apis\": [{\"endpoint\": \"String\", \"method\": \"String\", \"controller_code\": \"String\"}],\n  \"services\": [{\"name\": \"String\", \"code\": \"String\"}],\n  \"database_models\": [{\"model_name\": \"String\", \"schema_code\": \"String\"}],\n  \"authentication\": \"String\",\n  \"validation\": \"String\",\n  \"business_logic_summary\": \"String\"\n}"
-        },
-        "promptType": "define"
-      },
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 1.7,
-      "position": [
-        1500,
-        140
-      ],
-      "id": "agent-backend",
-      "name": "5. Backend Developer Agent"
-    },
-    {
-      "parameters": {
-        "jsCode": "let frontendRaw = $('4. Frontend Developer Agent').first().json.output || $('4. Frontend Developer Agent').first().json.text || '';\nlet backendRaw = $('5. Backend Developer Agent').first().json.output || $('5. Backend Developer Agent').first().json.text || '';\nlet sharedSpecs = $('Parse Architect JSON').first().json;\n\nlet feParsed, beParsed;\ntry { feParsed = JSON.parse(frontendRaw.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim()); } catch(e) { feParsed = { raw: frontendRaw }; }\ntry { beParsed = JSON.parse(backendRaw.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim()); } catch(e) { beParsed = { raw: backendRaw }; }\n\nreturn [{\n  json: {\n    ceo_plan: sharedSpecs.ceo_plan,\n    ba_specs: sharedSpecs.ba_specs,\n    architecture_specs: sharedSpecs.architecture_specs,\n    frontend_code: feParsed,\n    backend_code: beParsed\n  }\n}];"
+        "jsCode": "const raw = $input.first().json.output || $input.first().json.text || '';\nconst prev = $('Parse Architect Output').first().json;\ntry {\n  const clean = raw.replace(/```json\\n?/g,'').replace(/```\\n?/g,'').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ceo_plan: prev.ceo_plan, ba_specs: prev.ba_specs, architecture_specs: prev.architecture_specs, backend_code: parsed } }];\n} catch(e) {\n  return [{ json: { ceo_plan: prev.ceo_plan, ba_specs: prev.ba_specs, architecture_specs: prev.architecture_specs, backend_code: { text: raw } } }];\n}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2200,
-        300
+        1680,
+        360
       ],
-      "id": "merge-dev-outputs",
-      "name": "Merge Code Outputs"
+      "id": "parse-be",
+      "name": "Parse Backend Output"
     },
     {
       "parameters": {
-        "text": "=BA Acceptance Criteria: {{ JSON.stringify($json.ba_specs) }}\nArchitecture Specs: {{ JSON.stringify($json.architecture_specs) }}\nFrontend Output: {{ JSON.stringify($json.frontend_code) }}\nBackend Output: {{ JSON.stringify($json.backend_code) }}",
+        "promptType": "define",
+        "text": "=Frontend Task: {{ $json.ceo_plan.frontend_task }}\nArchitect Specs: {{ JSON.stringify($json.architecture_specs) }}\nBA Requirements: {{ JSON.stringify($json.ba_specs) }}\nBackend APIs available: {{ JSON.stringify($json.backend_code) }}",
         "options": {
-          "systemMessage": "=You are the Lead QA Engineer Agent of an elite AI Software Company.\n\nRESPONSIBILITIES:\n1. Audit Frontend and Backend outputs against BA User Stories and Architect Specs.\n2. Detect bugs, unhandled edge cases, missing requirements, security vulnerabilities (OWASP Top 10), and performance bottlenecks.\n3. Provide concrete remediation fixes and a QA Approval Status (PASSED / PASSED WITH WARNINGS / FAILED).\n\nOUTPUT FORMAT:\nReturn ONLY valid JSON:\n{\n  \"qa_status\": \"PASSED | PASSED WITH WARNINGS | FAILED\",\n  \"bugs_identified\": [{\"severity\": \"HIGH|MED|LOW\", \"component\": \"FE|BE\", \"issue\": \"String\", \"fix\": \"String\"}],\n  \"missing_requirements\": [\"String\"],\n  \"security_audit\": [\"String\"],\n  \"performance_issues\": [\"String\"],\n  \"summary_report\": \"String\"\n}"
-        },
-        "promptType": "define"
+          "systemMessage": "You are the Frontend Developer Agent.\nDo NOT generate any backend controllers, DB models or server-side code.\n\nReturn ONLY a raw JSON object (no markdown, no backticks):\n{\n  \"components\": [{\"name\":\"string\",\"code\":\"string\"}],\n  \"routing\": \"string\",\n  \"state_management\": \"string\",\n  \"folder_structure\": \"string\",\n  \"ui_logic\": \"string\",\n  \"api_integration_plan\": \"string\"\n}"
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        2500,
-        300
+        1880,
+        360
+      ],
+      "id": "agent-fe",
+      "name": "5. Frontend Developer Agent"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $input.first().json.output || $input.first().json.text || '';\nconst prev = $('Parse Backend Output').first().json;\ntry {\n  const clean = raw.replace(/```json\\n?/g,'').replace(/```\\n?/g,'').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ceo_plan: prev.ceo_plan, ba_specs: prev.ba_specs, architecture_specs: prev.architecture_specs, backend_code: prev.backend_code, frontend_code: parsed } }];\n} catch(e) {\n  return [{ json: { ceo_plan: prev.ceo_plan, ba_specs: prev.ba_specs, architecture_specs: prev.architecture_specs, backend_code: prev.backend_code, frontend_code: { text: raw } } }];\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2080,
+        360
+      ],
+      "id": "parse-fe",
+      "name": "Parse Frontend Output"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=BA Acceptance Criteria: {{ JSON.stringify($json.ba_specs) }}\nArchitecture: {{ JSON.stringify($json.architecture_specs) }}\nBackend Code: {{ JSON.stringify($json.backend_code) }}\nFrontend Code: {{ JSON.stringify($json.frontend_code) }}",
+        "options": {
+          "systemMessage": "You are the QA Engineer Agent.\nAudit the frontend and backend code against requirements.\n\nReturn ONLY a raw JSON object (no markdown, no backticks):\n{\n  \"qa_status\": \"PASSED or PASSED WITH WARNINGS or FAILED\",\n  \"bugs_identified\": [{\"severity\":\"HIGH or MED or LOW\",\"component\":\"FE or BE\",\"issue\":\"string\",\"fix\":\"string\"}],\n  \"missing_requirements\": [\"string\"],\n  \"security_audit\": [\"string\"],\n  \"performance_issues\": [\"string\"],\n  \"summary_report\": \"string\"\n}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        2280,
+        360
       ],
       "id": "agent-qa",
       "name": "6. QA Engineer Agent"
     },
     {
       "parameters": {
-        "jsCode": "let rawText = $input.first().json.output || $input.first().json.text || '';\nlet previousData = $('Merge Code Outputs').first().json;\ntry {\n  const clean = rawText.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ...previousData, qa_report: parsed } }];\n} catch (e) {\n  return [{ json: { ...previousData, qa_report: { text: rawText } } }];\n}"
+        "jsCode": "const raw = $input.first().json.output || $input.first().json.text || '';\nconst prev = $('Parse Frontend Output').first().json;\ntry {\n  const clean = raw.replace(/```json\\n?/g,'').replace(/```\\n?/g,'').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ...prev, qa_report: parsed } }];\n} catch(e) {\n  return [{ json: { ...prev, qa_report: { text: raw } } }];\n}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2840,
-        300
+        2480,
+        360
       ],
       "id": "parse-qa",
-      "name": "Parse QA JSON"
+      "name": "Parse QA Output"
     },
     {
       "parameters": {
-        "text": "=Project Context: {{ JSON.stringify($json.ceo_plan) }}\nArchitecture Specs: {{ JSON.stringify($json.architecture_specs) }}\nFrontend Code: {{ JSON.stringify($json.frontend_code) }}\nBackend Code: {{ JSON.stringify($json.backend_code) }}\nQA Report: {{ JSON.stringify($json.qa_report) }}",
+        "promptType": "define",
+        "text": "=Project: {{ JSON.stringify($json.ceo_plan) }}\nArchitecture: {{ JSON.stringify($json.architecture_specs) }}\nBackend: {{ JSON.stringify($json.backend_code) }}\nFrontend: {{ JSON.stringify($json.frontend_code) }}\nQA Report: {{ JSON.stringify($json.qa_report) }}",
         "options": {
-          "systemMessage": "=You are the Lead Technical Writer Agent of an elite AI Software Company.\n\nRESPONSIBILITIES:\n1. Compile complete, professional documentation suite for the software release.\n2. Create production-ready README.md, System Architecture Overview, Environment Setup & Installation Guide, REST API Reference Docs, Directory Structure Map, and Deployment Procedures (Docker / CI/CD).\n\nOUTPUT FORMAT:\nReturn ONLY valid JSON:\n{\n  \"readme_md\": \"String\",\n  \"architecture_summary\": \"String\",\n  \"installation_guide\": \"String\",\n  \"api_documentation\": \"String\",\n  \"folder_explanation\": \"String\",\n  \"deployment_instructions\": \"String\"\n}"
-        },
-        "promptType": "define"
+          "systemMessage": "You are the Technical Writer Agent.\nGenerate professional documentation.\n\nReturn ONLY a raw JSON object (no markdown, no backticks):\n{\n  \"readme_md\": \"string\",\n  \"architecture_summary\": \"string\",\n  \"installation_guide\": \"string\",\n  \"api_documentation\": \"string\",\n  \"folder_explanation\": \"string\",\n  \"deployment_instructions\": \"string\"\n}"
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        3000,
-        300
+        2680,
+        360
       ],
-      "id": "agent-techwriter",
+      "id": "agent-tw",
       "name": "7. Technical Writer Agent"
     },
     {
       "parameters": {
-        "jsCode": "let rawText = $input.first().json.output || $input.first().json.text || '';\nlet previousData = $('Parse QA JSON').first().json;\ntry {\n  const clean = rawText.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ...previousData, tech_docs: parsed } }];\n} catch (e) {\n  return [{ json: { ...previousData, tech_docs: { text: rawText } } }];\n}"
+        "jsCode": "const raw = $input.first().json.output || $input.first().json.text || '';\nconst prev = $('Parse QA Output').first().json;\ntry {\n  const clean = raw.replace(/```json\\n?/g,'').replace(/```\\n?/g,'').trim();\n  const parsed = JSON.parse(clean);\n  return [{ json: { ...prev, tech_docs: parsed } }];\n} catch(e) {\n  return [{ json: { ...prev, tech_docs: { text: raw } } }];\n}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3340,
-        300
+        2880,
+        360
       ],
-      "id": "parse-techwriter",
-      "name": "Parse TechWriter JSON"
+      "id": "parse-tw",
+      "name": "Parse TechWriter Output"
     },
     {
       "parameters": {
-        "text": "=Complete Company Artifacts:\n- CEO Vision: {{ JSON.stringify($json.ceo_plan) }}\n- BA Requirements: {{ JSON.stringify($json.ba_specs) }}\n- Architecture Specs: {{ JSON.stringify($json.architecture_specs) }}\n- Frontend Code: {{ JSON.stringify($json.frontend_code) }}\n- Backend Code: {{ JSON.stringify($json.backend_code) }}\n- QA Audit Report: {{ JSON.stringify($json.qa_report) }}\n- Technical Documentation: {{ JSON.stringify($json.tech_docs) }}",
+        "promptType": "define",
+        "text": "=CEO Plan: {{ JSON.stringify($json.ceo_plan) }}\nBA Specs: {{ JSON.stringify($json.ba_specs) }}\nArchitecture: {{ JSON.stringify($json.architecture_specs) }}\nBackend Code: {{ JSON.stringify($json.backend_code) }}\nFrontend Code: {{ JSON.stringify($json.frontend_code) }}\nQA Report: {{ JSON.stringify($json.qa_report) }}\nDocumentation: {{ JSON.stringify($json.tech_docs) }}",
         "options": {
-          "systemMessage": "=You are the Executive Vice President of AI Delivery and Final Synthesizer Agent.\n\nRESPONSIBILITIES:\n1. Collect and review artifacts produced by all 7 specialized agents (CEO, BA, Solution Architect, Frontend Dev, Backend Dev, QA Engineer, Tech Writer).\n2. Merge and format everything into a single, masterfully structured, elegant markdown report.\n3. Present the user with an impressive, end-to-end software package including executive summary, requirements, full architecture, frontend code, backend code, QA report, and setup/deployment guides.\n4. Deliver an executive-level presentation that wows the user."
-        },
-        "promptType": "define"
+          "systemMessage": "You are the Executive VP of AI Delivery and Final Synthesizer.\n\nMerge all agent outputs into ONE single elegant, well-formatted markdown document.\nInclude sections: Executive Summary, Features & User Stories, Architecture, Backend Code, Frontend Code, QA Report, Documentation.\nPresent it in a clear, professional, impressive format."
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        3500,
-        300
+        3080,
+        360
       ],
       "id": "agent-merger",
       "name": "8. Final Executive Merger Agent"
@@ -426,36 +439,36 @@
       "main": [
         [
           {
-            "node": "1. CEO / Manager Agent",
+            "node": "1. CEO Manager Agent",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Ollama Model - CEO": {
+    "Ollama - CEO": {
       "ai_languageModel": [
         [
           {
-            "node": "1. CEO / Manager Agent",
+            "node": "1. CEO Manager Agent",
             "type": "ai_languageModel",
             "index": 0
           }
         ]
       ]
     },
-    "1. CEO / Manager Agent": {
+    "1. CEO Manager Agent": {
       "main": [
         [
           {
-            "node": "Parse CEO JSON",
+            "node": "Parse CEO Output",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Parse CEO JSON": {
+    "Parse CEO Output": {
       "main": [
         [
           {
@@ -466,7 +479,7 @@
         ]
       ]
     },
-    "Ollama Model - BA": {
+    "Ollama - BA": {
       "ai_languageModel": [
         [
           {
@@ -481,14 +494,14 @@
       "main": [
         [
           {
-            "node": "Parse BA JSON",
+            "node": "Parse BA Output",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Parse BA JSON": {
+    "Parse BA Output": {
       "main": [
         [
           {
@@ -499,7 +512,7 @@
         ]
       ]
     },
-    "Ollama Model - Architect": {
+    "Ollama - Architect": {
       "ai_languageModel": [
         [
           {
@@ -514,74 +527,80 @@
       "main": [
         [
           {
-            "node": "Parse Architect JSON",
+            "node": "Parse Architect Output",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Parse Architect JSON": {
+    "Parse Architect Output": {
       "main": [
         [
           {
-            "node": "4. Frontend Developer Agent",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "5. Backend Developer Agent",
+            "node": "4. Backend Developer Agent",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Ollama Model - Frontend": {
+    "Ollama - Backend": {
       "ai_languageModel": [
         [
           {
-            "node": "4. Frontend Developer Agent",
+            "node": "4. Backend Developer Agent",
             "type": "ai_languageModel",
             "index": 0
           }
         ]
       ]
     },
-    "Ollama Model - Backend": {
+    "4. Backend Developer Agent": {
+      "main": [
+        [
+          {
+            "node": "Parse Backend Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Backend Output": {
+      "main": [
+        [
+          {
+            "node": "5. Frontend Developer Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama - Frontend": {
       "ai_languageModel": [
         [
           {
-            "node": "5. Backend Developer Agent",
+            "node": "5. Frontend Developer Agent",
             "type": "ai_languageModel",
             "index": 0
           }
         ]
       ]
     },
-    "4. Frontend Developer Agent": {
+    "5. Frontend Developer Agent": {
       "main": [
         [
           {
-            "node": "Merge Code Outputs",
+            "node": "Parse Frontend Output",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "5. Backend Developer Agent": {
-      "main": [
-        [
-          {
-            "node": "Merge Code Outputs",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Merge Code Outputs": {
+    "Parse Frontend Output": {
       "main": [
         [
           {
@@ -592,7 +611,7 @@
         ]
       ]
     },
-    "Ollama Model - QA": {
+    "Ollama - QA": {
       "ai_languageModel": [
         [
           {
@@ -607,14 +626,14 @@
       "main": [
         [
           {
-            "node": "Parse QA JSON",
+            "node": "Parse QA Output",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Parse QA JSON": {
+    "Parse QA Output": {
       "main": [
         [
           {
@@ -625,7 +644,7 @@
         ]
       ]
     },
-    "Ollama Model - TechWriter": {
+    "Ollama - TechWriter": {
       "ai_languageModel": [
         [
           {
@@ -640,14 +659,14 @@
       "main": [
         [
           {
-            "node": "Parse TechWriter JSON",
+            "node": "Parse TechWriter Output",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Parse TechWriter JSON": {
+    "Parse TechWriter Output": {
       "main": [
         [
           {
@@ -658,7 +677,7 @@
         ]
       ]
     },
-    "Ollama Model - ExecutiveMerger": {
+    "Ollama - Merger": {
       "ai_languageModel": [
         [
           {
@@ -674,10 +693,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "c2b3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e",
-  "id": "SoftwareCompanyMultiAgentWorkflowOllama",
+  "versionId": "d3e4f5a6-b7c8-9d0e-1f2a-3b4c5d6e7f8a",
+  "id": "SoftwareCompanySequentialOllama",
   "meta": {
-    "templateId": "multi-agent-software-company-n8n-ollama"
+    "templateId": "multi-agent-software-company-sequential-ollama"
   },
   "tags": []
 }
